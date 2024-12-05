@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Monument-Extended-Bold';
+    src:
+      url('/fonts/MonumentExtendedBold.woff2') format('woff2'),
+      url('/fonts/MonumentExtendedBold.woff') format('woff');
+  }
+  @font-face {
+    font-family: 'Monument-Extended-Regular';
+    src:
+      url('/fonts/MonumentExtendedRegular.woff2') format('woff2'),
+      url('/fonts/MonumentExtendedRegular.woff') format('woff');
+  }
+  @font-face {
+    font-family: 'Monument-Extended-Light';
+    src:
+      url('/fonts/MonumentExtendedLight.woff2') format('woff2'),
+      url('/fonts/MonumentExtendedLight.woff') format('woff');
+  }
+  @font-face {
+    font-family: 'Monument-Extended-UltraLight';
+    src:
+      url('/fonts/MonumentExtendedUltralight.woff2') format('woff2'),
+      url('/fonts/MonumentExtendedUltralight.woff') format('woff');
+  }
+  @font-face {
+    font-family: 'Prata';
+    src: url('/fonts/Prata-Regular.ttf') format('ttf');
+  }
+  @font-face {
+    font-family: 'Montserrat-Light';
+    src:
+      url('/fonts/MontserratLight.woff') format('woff'),
+      url('/fonts/MontserratLight.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'DMSans-Regular';
+    src:
+      url('/fonts/DMSans-Regular.woff') format('woff'),
+      url('/fonts/DMSans-Regular.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Adine-Kirnberg';
+    src: url('/fonts/Adine-Kirnberg.ttf') format('ttf');
+  }
+  @font-face {
+    font-family: 'Sacramento-Regular';
+    src: url('/fonts/Sacramento-Regular.ttf') format('ttf');
+  }
+}
+
+body {
+}
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  margin: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: antiquewhite;
+}
+::-webkit-scrollbar-track {
+  background-color: darkgray;
+}
+
+/* @keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+span:nth-child(1) {
+  opacity: 0;
+  animation: fadeIn 500ms infinite;
+}
+span:nth-child(2) {
+  opacity: 0;
+  animation: fadeIn 500ms infinite;
+  animation-delay: 500ms;
+}
+span:nth-child(3) {
+  opacity: 0;
+  animation: fadeIn 500ms infinite;
+  animation-delay: 1000ms;
+} */
+
+.dot-flashing {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #ffffff;
+  animation: dot-flashing 1s infinite linear alternate;
+  animation-delay: 0.5s;
+}
+.dot-flashing::before,
+.dot-flashing::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+}
+.dot-flashing::before {
+  left: -15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #ffffff;
+  animation: dot-flashing 1s infinite alternate;
+  animation-delay: 0s;
+}
+.dot-flashing::after {
+  left: 15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #ffffff;
+  animation: dot-flashing 1s infinite alternate;
+  animation-delay: 1s;
+}
+
+@keyframes dot-flashing {
+  0% {
+    background-color: #ffffff;
+  }
+  50%,
+  100% {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}

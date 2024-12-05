@@ -1,0 +1,15 @@
+{
+  "name": "GUDS",
+  "description": "GUDS 5k 12% ",
+  "image": "https://ipfs.io/ipfs/QmPj67X8K6FQd816NPkxQEfVM1KkXXxcMD97L45L8yFa5v",
+  "attributes": [
+    {
+      "trait_type": "Color",
+      "value": "Blue"
+    },
+    {
+      "trait_type": "Percent",
+      "value": "12%"
+    }
+  ]
+}
